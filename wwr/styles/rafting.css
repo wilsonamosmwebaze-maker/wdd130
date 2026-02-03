@@ -1,10 +1,3 @@
-:root {
-    --primary-color: #0b5ed7;
-    --accent1-color: #1b1b1b;
-    --heading-font: Arial, sans-serif;
-    --body-font: Verdana, sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -12,66 +5,89 @@
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
 }
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
+/* HEADER — MUST USE GRID */
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    background-color: #dcd2ff;
+    padding: 1rem;
 }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+header img {
+    width: 120px;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+/* NAV — MUST USE FLEX */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
 }
 
-.socialmedia a {
+nav a {
     text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
 
-/* Hero styles */
+/* HERO */
 .hero {
-    position: relative;
+    padding: 2rem;
+    text-align: center;
 }
 
 .hero img {
-    display: block;
     width: 100%;
-    height: auto;
+    max-width: 400px;
+    margin-top: 1rem;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
+/* HISTORY */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.history img {
     width: 100%;
+}
+
+/* ADVENTURES */
+.adventures {
+    padding: 2rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 16px;
+.adventures figure img {
+    width: 100%;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 12px;
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dcd2ff;
+    padding: 1rem;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social img {
+    width: 30px;
 }
