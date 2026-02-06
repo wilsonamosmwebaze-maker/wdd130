@@ -133,3 +133,34 @@ button {
     gap: 1.5rem;
     text-align: center;
 }
+
+.contact {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.contact-info,
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.employees {
+    display: flex;
+    gap: 1rem;
+}
+
+.employees figure {
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
